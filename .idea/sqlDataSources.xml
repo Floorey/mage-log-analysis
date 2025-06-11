@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="6fbeb383-26eb-4b47-8efc-64e3f67aca4c" name="Damage Done Méliân - MugZee, Heads of Security LFR  Kill   (818 PM) - Report Liberation of Undermine  Warcraft Logs.csv Mapping">
+      <data-sources db="3ff84fdb-980a-4915-a3d1-0e21107fb7df" ddl="58a82b00-f251-4648-9c45-2d226daf05b6" />
+    </mapping>
+    <mapping uuid="21c768d3-9390-4638-9cd2-89d332988fb1" name="analysis_results.sqlite Mapping">
+      <data-sources db="576bfb73-1c86-4011-88d0-1811bd28548a" ddl="6fd1db46-c773-4c82-9ad3-974c4c67156b" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="34edc8cb-4525-42ce-ba34-a49dcf93b57d" name="analysis_results.py Mapping">
+      <data-sources db="576bfb73-1c86-4011-88d0-1811bd28548a" ddl="6fd1db46-c773-4c82-9ad3-974c4c67156b" />
+      <scope>
+        <node negative="1">
+          <node kind="database" negative="1" />
+          <node kind="schema" qname="main" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="6fd1db46-c773-4c82-9ad3-974c4c67156b" />
+          <option name="name" value="analysis_results.py (DDL)" />
+          <option name="dbmsName" value="SQLITE" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/script.sql" />
+            </array>
+          </option>
+          <option name="outPath" value="$PROJECT_DIR$/utils" />
+          <option name="outLayout" value="File per object by schema.groovy" />
+          <option name="scopes">
+            <map>
+              <entry key="$PROJECT_DIR$" value="" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

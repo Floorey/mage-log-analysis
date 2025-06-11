@@ -1,0 +1,37 @@
+{
+  "name": "Arcane Burst Guide ST",
+  "hero_talent": "Sunfury",
+  "opener": [
+    "Evocation fully for Siphon Storm 3 seconds before pull",
+    "Tempered Potion",
+    "Arcane Missiles st pull",
+    "Nether Precision is up",
+    "Arcane Surge",
+    "If 4 Arcane  -> Arcane Barrage -> Touch of the Magi",
+    "Else -> Touch of the Magi -> Arcane Blast"
+  ],
+  "burst_logic": [
+    "Maintain 4 Arcane Charges as much as possible",
+    "Cast Arcane Missiles with 3x Clearcasting",
+    "Cast Arcane Barrage during Arcane Soul last GCD",
+    "Cast Arcane Barrage  if Arcane Soul is activ",
+    "Cast Arcane Barrage  if Intuition or Arcane Tempo will expire before next cast finishes",
+    "Cast Shifting Power after Arcane Soul ends",
+    "Cast Arcane Missiles with Clearcast when you don´t have Nether Precision",
+    "Cast Arcane Barrage if you have Intuition or Glorious Incandescence unless Touch of the Magi < 6s",
+    "Cast Arcane Barrage whenever you have 18x Stacks Arcane Harmony or Nether Precision",
+    "Cast Arcane Blast if nothing else applies"
+  ],
+  "important_buffs": [
+    "Siphon Storm",
+    "Clearcasting",
+    "Arcane Soul",
+    "Arcane Charges",
+    "Nether Precision",
+    "Intuition",
+    "Glorious Incandescence",
+    "Arcane Tempo",
+    "Arcane Arcane Harmony",
+  ]
+
+}
