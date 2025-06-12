@@ -1,12 +1,16 @@
-def parse_buff_csv(csv_list):
-	all_buffs = []
-	for df in csv_list:
-		if 'event_type' in df.columns and 'buff' in df.columns:
-			buff_rows = df[df['event_type'].isin(['applybuff', 'refreshbuff'])]
-			for _, row in buff_rows.iterrows():
-				all_buffs.append({
-					"timestamp": int(row['timestamp']),
-					"name": row['buf']
-				})
-	return all_buffs
+import pandas as pd
 
+def parse_buff_csv(all_dfs):
+    buffs = []
+    for df in all_dfs:
+        if "timestamp" in df.columns and "buff" in df.columns and "duration" in df.columns:
+            filtered = df[["timestamp", "buff", "duration", "source_name"]].dropna()
+            for _, row in filtered.iterrows():
+                try:
+                    ts = int(row["timestamp"])
+                    dur = int(row["duration"])
+                    buff = str(row["buff"])
+                except (ValueError, TypeError):
+                    continue
+                buffs.append({"timestamp": ts, "buff": buff, "duration": dur, "source_name": row.get("source_name")})
+    return pd.DataFrame(buffs)
