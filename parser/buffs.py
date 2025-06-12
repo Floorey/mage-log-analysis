@@ -3,14 +3,15 @@ import pandas as pd
 def parse_buff_csv(all_dfs):
     buffs = []
     for df in all_dfs:
-        if "timestamp" in df.columns and "buff" in df.columns and "duration" in df.columns:
-            filtered = df[["timestamp", "buff", "duration", "source_name"]].dropna()
+        if {"timestamp", "buff", "duration", "source_name"}.issubset(df.columns):
+            filtered = df[["timestamp", "buff", "duration", "source_name"]].droona()
             for _, row in filtered.iterrows():
                 try:
-                    ts = int(row["timestamp"])
-                    dur = int(row["duration"])
-                    buff = str(row["buff"])
+                    buffs.append({
+                        "timestamp": int(row["timestamp"]),
+                        "buff": str(row["buff"]),
+                        "duration": int(row["sourceName"])
+                    })
                 except (ValueError, TypeError):
                     continue
-                buffs.append({"timestamp": ts, "buff": buff, "duration": dur, "source_name": row.get("source_name")})
     return pd.DataFrame(buffs)
