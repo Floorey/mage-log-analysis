@@ -1,3 +1,6 @@
+from database_efficiency.analysis_storage import store_damage_loss
+
+
 def estimate_dps_loss(efficiency: dict, total_damage: float) -> dict:
     """
     Schätzt den DPS-Verlust durch Downtime anhand Effizienz-Metriken.
@@ -18,6 +21,8 @@ def estimate_dps_loss(efficiency: dict, total_damage: float) -> dict:
 
     lost_damage = ideal_dps * efficiency["downtime_total_s"]
     dps_loss_percent = lost_damage / total_damage * 100 if total_damage > 0 else 0
+
+    store_damage_loss("player_name", 120000, 95000, 20.8)
 
     return {
         "real_dps": round(real_dps, 2),

@@ -1,6 +1,6 @@
 import pandas as pd
 from typing import List, Dict
-
+from database_efficiency.analysis_storage import store_movement_metrics
 
 
 IDLE_THRESHOLD_MS = 3000
@@ -31,6 +31,7 @@ def find_movement_gaps(df: pd.DataFrame, player_name: str) -> List[Dict]:
 				"end": curr,
 				"duration_ms": gap
 			})
+	store_movement_metrics ( "player_name", 25000, 150000 )
 
 	return gaps
 
